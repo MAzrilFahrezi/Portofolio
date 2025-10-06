@@ -1,4 +1,4 @@
-<h1 align="center">
+<!-- <h1 align="center">
 dafkur.com
 </h1>
 <p align="center">
@@ -247,4 +247,4 @@ However, feel free to fork and explore it for learning or inspiration!
 ---
 
 > This project is developed with a focus on simplicity, accessibility, and performance. Feel free to explore the code and experience the UI interactions.
-> 🔍 This website uses Google Analytics for basic traffic insights. No personal data is collected.
+> 🔍 This website uses Google Analytics for basic traffic insights. No personal data is collected. -->
