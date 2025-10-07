@@ -12,8 +12,16 @@ type ReCaptchaProviderProps = {
 
 export default function ReCaptchaProvider({ onVerify, children }: ReCaptchaProviderProps) {
   const recaptchaRef = useRef<ReCAPTCHA>(null)
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
   const handleExecute = async () => {
+    if (!siteKey) {
+      // Skip reCAPTCHA if no site key is configured
+      console.warn('ReCAPTCHA site key not configured, skipping verification')
+      onVerify('skip-recaptcha')
+      return
+    }
+    
     const token = await recaptchaRef.current?.executeAsync()
     recaptchaRef.current?.reset()
     onVerify(token ?? null)
@@ -21,13 +29,15 @@ export default function ReCaptchaProvider({ onVerify, children }: ReCaptchaProvi
 
   return (
     <>
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-        size="invisible"
-        badge="bottomleft"
-        style={{ display: 'none' }}
-      />
+      {siteKey && (
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={siteKey}
+          size="invisible"
+          badge="bottomleft"
+          style={{ display: 'none' }}
+        />
+      )}
       {children(handleExecute)}
     </>
   )

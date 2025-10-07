@@ -1,11 +1,9 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /secret
-Disallow: /admin
 
 # Host
-Host: https://dafkur.com
+Host: https://yoursite.com
 
 # Sitemaps
-Sitemap: https://dafkur.com/sitemap.xml
+Sitemap: https://yoursite.com/sitemap.xml

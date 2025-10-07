@@ -35,13 +35,18 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const isHuman = await verifyRecaptcha(token);
+  // Skip reCAPTCHA verification if no secret key is configured or token is 'skip-recaptcha'
+  if (token !== 'skip-recaptcha') {
+    const isHuman = await verifyRecaptcha(token);
 
-  if (!isHuman) {
-    return NextResponse.json(
-      { error: "reCAPTCHA verification failed. Bot suspected." },
-      { status: 403 }
-    );
+    if (!isHuman) {
+      return NextResponse.json(
+        { error: "reCAPTCHA verification failed. Bot suspected." },
+        { status: 403 }
+      );
+    }
+  } else {
+    console.warn('ReCAPTCHA verification skipped - no keys configured');
   }
 
   try {
