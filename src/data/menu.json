@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Home",
+    "icon": "home",
+    "tracking": "menu_button_home",
+    "pathname": [
+      "#home"
+    ]
+  },
+  {
+    "name": "About",
+    "icon": "user",
+    "tracking": "menu_button_about",
+    "pathname": [
+      "#about"
+    ]
+  },
+  {
+    "name": "Skills",
+    "icon": "stack",
+    "tracking": "menu_button_skills",
+    "pathname": [
+      "#skills"
+    ]
+  },
+  {
+    "name": "Experiences",
+    "icon": "skills",
+    "tracking": "menu_button_experiences",
+    "pathname": [
+      "#experiences"
+    ]
+  },
+  {
+    "name": "Projects",
+    "icon": "project",
+    "tracking": "menu_button_projects",
+    "pathname": [
+      "#projects"
+    ]
+  },
+  {
+    "name": "Contact",
+    "icon": "contact",
+    "tracking": "menu_button_contact",
+    "pathname": [
+      "#contact"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Instagram",
+    "detail": "@azrilfahrezi",
+    "link": "https://www.instagram.com/azrilfahrezi/",
+    "icon": "instagram"
+  },
+  {
+    "name": "WhatsApp",
+    "detail": "+62089699272224",
+    "link": "https://wa.me/62089699272224",
+    "icon": "whatsapp"
+  },
+  {
+    "name": "GitHub",
+    "detail": "@MAzrilFahrezi",
+    "link": "https://github.com/MAzrilFahrezi",
+    "icon": "github"
+  },
+  {
+    "name": "LinkedIn",
+    "detail": "Muhammad Azril Fahrezi",
+    "link": "https://www.linkedin.com/in/azrilfahrezi/",
+    "icon": "linkedin"
+  }
+]

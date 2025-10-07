@@ -1,0 +1,18 @@
+[
+  {
+    "lang": "javascript",
+    "content": "// Javascript\nconst arr = [\"Muhammad\", \"Azril\", \"Fahrezi\"];\n\nfunction greeting() {\n  const name = arr.find((item) => item === \"Muhammad\");\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greeting()); // Hello, Muhammad!"
+  },
+  {
+    "lang": "typescript",
+    "content": "// TypeScript\nconst arr: string[] = [\"Muhammad\", \"Azril\", \"Fahrezi\"];\n\nfunction greeting(): string {\n  const name: string | undefined = arr.find((item) => item === \"Muhammad\");\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greeting()); // Hello, Muhammad!"
+  },
+  {
+    "lang": "python",
+    "content": "# Python\narr = [\"Muhammad\", \"Azril\", \"Fahrezi\"]\n\ndef greeting():\n    name = next((item for item in arr if item == \"Muhammad\"), None)\n    return f\"Hello, {name}!\"\n\nprint(greeting()) # Hello, Muhammad!"
+  },
+  {
+    "lang": "php",
+    "content": "<?php\n// PHP\n$arr = [\"Muhammad\", \"Azril\", \"Fahrezi\"];\n\nfunction greeting($arr) {\n  $name = null;\n  foreach ($arr as $item) {\n    if ($item === \"Muhammad\") {\n      $name = $item;\n      break;\n    }\n  }\n  return \"Hello, $name!\";\n}\n\necho greeting($arr); // Hello, Muhammad!\n?>"
+  }
+]
