@@ -65,9 +65,9 @@ export default function SkillsEditor() {
           options={{
             lineNumbers: isMobile ? "off" : "on",
             fontSize: isMobile ? 10 : 14,
-            inlineSuggest: true,
+            inlineSuggest: { enabled: true },
             formatOnType: true,
-            autoClosingBrackets: true,
+            autoClosingBrackets: "always",
             minimap: { enabled: false },
           }}
         />

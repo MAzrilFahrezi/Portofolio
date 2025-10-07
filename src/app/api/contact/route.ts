@@ -1,8 +1,8 @@
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
 async function verifyRecaptcha(token: string): Promise<boolean> {
   const secret = process.env.RECAPTCHA_SECRET_KEY;
@@ -45,9 +45,12 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const message = await prisma.message.create({ data });
+    // TODO: Store message in database
+    // const message = await prisma.message.create({ data });
+    
+    console.log('Contact form submission:', data);
 
-    return NextResponse.json({ success: true, message });
+    return NextResponse.json({ success: true, message: 'Message received successfully' });
   } catch (error) {
     return NextResponse.json(
       { error: "Something went wrong. (Server Error)" },

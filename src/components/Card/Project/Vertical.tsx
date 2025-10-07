@@ -20,14 +20,14 @@ export default function VerticalCard(props: ProjectDataType) {
     hover: {
       y: 0,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
     initial: {
       y: -100,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },

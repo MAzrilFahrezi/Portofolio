@@ -40,14 +40,14 @@ export function ArrowButton(props: ArrowButtonProps) {
     hover: {
       y: 0,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
     initial: {
       y: 28,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },

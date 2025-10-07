@@ -21,7 +21,7 @@ export default function BoxCard(props: ProjectDataType) {
       y: -40,
       scale: 0.7,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
@@ -29,7 +29,7 @@ export default function BoxCard(props: ProjectDataType) {
       y: 0,
       scale: 1,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
@@ -39,14 +39,14 @@ export default function BoxCard(props: ProjectDataType) {
     hover: {
       y: -40,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
     initial: {
       y: 100,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
@@ -56,14 +56,14 @@ export default function BoxCard(props: ProjectDataType) {
     hover: {
       y: 0,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
     initial: {
       y: -100,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.3,
       },
     },
